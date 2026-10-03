@@ -1400,6 +1400,485 @@ body::after {
    ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
+   ```css
+/* =========================================================
+   BUALUANG 101 — FINAL RAW / YOUTH GRUNGE OVERRIDE
+   paste this at the VERY END of your CSS
+   ========================================================= */
+
+/* ---------- RAW HERO TYPE ---------- */
+
+.hero-content h1 {
+  font-family: 'Manrope', 'Noto Sans Thai', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+
+  /* แน่น / ดิบ / poster typography */
+  letter-spacing: -.105em;
+  line-height: .80;
+
+  transform: rotate(-1.4deg) scaleX(.97);
+  transform-origin: left center;
+}
+
+.hero-content h1 .outlined-number {
+  letter-spacing: -.11em;
+  -webkit-text-stroke: 2px var(--dirty-white);
+}
+
+
+/* ---------- PRINTED POSTER IMAGE ---------- */
+
+.work-poster {
+  filter:
+    contrast(1.08)
+    saturate(.95);
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* texture แบบงานพิมพ์ */
+.work-poster::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0px,
+      transparent 3px,
+      rgba(255,255,255,.025) 4px
+    );
+
+  mix-blend-mode: overlay;
+  opacity: .55;
+}
+
+
+/* ---------- IMPERFECT CARD ALIGNMENT ---------- */
+
+.work-card {
+  position: relative;
+}
+
+.work-card:nth-child(1) {
+  transform: rotate(-1.8deg);
+}
+
+.work-card:nth-child(2) {
+  transform: rotate(1.8deg);
+}
+
+.work-card:nth-child(3) {
+  transform: rotate(-1deg);
+}
+
+
+/* hover ไม่ต้องเด้งแรงเกิน */
+
+.work-card:hover {
+  z-index: 5;
+}
+
+.work-card:hover .work-poster {
+  transform:
+    translateY(-5px)
+    rotate(0deg);
+
+  filter:
+    contrast(1.12)
+    saturate(.92);
+}
+
+
+/* ---------- RAW CARD BORDER ---------- */
+
+.work-card .work-poster {
+  border: 2px solid var(--dirty-white);
+  border-radius: 0;
+}
+
+
+/* ---------- POSTER CAPTION ---------- */
+
+.poster-caption {
+  font-family:
+    'Manrope',
+    'Noto Sans Thai',
+    sans-serif;
+
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -.045em;
+}
+
+
+/* ---------- ROUGH LABEL ---------- */
+
+.poster-tag {
+  font-family:
+    'DM Mono',
+    monospace;
+
+  text-transform: uppercase;
+  font-weight: 800;
+
+  letter-spacing: .08em;
+}
+
+
+/* ---------- RAW FILTER BUTTON ---------- */
+
+.work-filters button {
+  border-radius: 0;
+}
+
+.work-filters button.selected {
+  box-shadow:
+    4px 4px 0 var(--blue);
+}
+
+
+/* ---------- REMOVE EXCESS "PRETTY" EFFECTS ---------- */
+
+.hero-star,
+.heading-spark,
+.statement-spark {
+  display: none;
+}
+
+
+/* ---------- ROUGH UNDERLINE ---------- */
+
+.underlined-link {
+  border-bottom: 2px solid currentColor;
+  font-weight: 800;
+}
+
+
+/* ---------- SECTION MARK ---------- */
+
+.section::before {
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   MOBILE — KEEP THE RAW FEEL
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .work-card:nth-child(1),
+  .work-card:nth-child(2),
+  .work-card:nth-child(3) {
+    transform: none;
+  }
+
+  .work-card:hover .work-poster {
+    transform: translateY(-4px);
+  }
+
+  .hero-content h1 {
+    transform: rotate(-1deg) scaleX(.97);
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .hero-content h1 {
+    font-size: 18vw;
+    letter-spacing: -.105em;
+    line-height: .79;
+  }
+
+  .hero-content h1 .outlined-number {
+    -webkit-text-stroke: 2px var(--dirty-white);
+  }
+
+  .work-card:nth-child(1),
+  .work-card:nth-child(2),
+  .work-card:nth-child(3) {
+    transform: none;
+  }
+
+  .work-poster {
+    filter:
+      contrast(1.06)
+      saturate(.94);
+  }
+
+  .work-card:hover .work-poster {
+    transform: translateY(-3px);
+  }
+
+  .poster-caption {
+    letter-spacing: -.04em;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+   ```css
+/* =========================================================
+   BUALUANG 101 — FINAL RAW / YOUTH GRUNGE OVERRIDE
+   paste this at the VERY END of your CSS
+   ========================================================= */
+
+/* ---------- RAW HERO TYPE ---------- */
+
+.hero-content h1 {
+  font-family: 'Manrope', 'Noto Sans Thai', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+
+  /* แน่น / ดิบ / poster typography */
+  letter-spacing: -.105em;
+  line-height: .80;
+
+  transform: rotate(-1.4deg) scaleX(.97);
+  transform-origin: left center;
+}
+
+.hero-content h1 .outlined-number {
+  letter-spacing: -.11em;
+  -webkit-text-stroke: 2px var(--dirty-white);
+}
+
+
+/* ---------- PRINTED POSTER IMAGE ---------- */
+
+.work-poster {
+  filter:
+    contrast(1.08)
+    saturate(.95);
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* texture แบบงานพิมพ์ */
+.work-poster::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0px,
+      transparent 3px,
+      rgba(255,255,255,.025) 4px
+    );
+
+  mix-blend-mode: overlay;
+  opacity: .55;
+}
+
+
+/* ---------- IMPERFECT CARD ALIGNMENT ---------- */
+
+.work-card {
+  position: relative;
+}
+
+.work-card:nth-child(1) {
+  transform: rotate(-1.8deg);
+}
+
+.work-card:nth-child(2) {
+  transform: rotate(1.8deg);
+}
+
+.work-card:nth-child(3) {
+  transform: rotate(-1deg);
+}
+
+
+/* hover ไม่ต้องเด้งแรงเกิน */
+
+.work-card:hover {
+  z-index: 5;
+}
+
+.work-card:hover .work-poster {
+  transform:
+    translateY(-5px)
+    rotate(0deg);
+
+  filter:
+    contrast(1.12)
+    saturate(.92);
+}
+
+
+/* ---------- RAW CARD BORDER ---------- */
+
+.work-card .work-poster {
+  border: 2px solid var(--dirty-white);
+  border-radius: 0;
+}
+
+
+/* ---------- POSTER CAPTION ---------- */
+
+.poster-caption {
+  font-family:
+    'Manrope',
+    'Noto Sans Thai',
+    sans-serif;
+
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -.045em;
+}
+
+
+/* ---------- ROUGH LABEL ---------- */
+
+.poster-tag {
+  font-family:
+    'DM Mono',
+    monospace;
+
+  text-transform: uppercase;
+  font-weight: 800;
+
+  letter-spacing: .08em;
+}
+
+
+/* ---------- RAW FILTER BUTTON ---------- */
+
+.work-filters button {
+  border-radius: 0;
+}
+
+.work-filters button.selected {
+  box-shadow:
+    4px 4px 0 var(--blue);
+}
+
+
+/* ---------- REMOVE EXCESS "PRETTY" EFFECTS ---------- */
+
+.hero-star,
+.heading-spark,
+.statement-spark {
+  display: none;
+}
+
+
+/* ---------- ROUGH UNDERLINE ---------- */
+
+.underlined-link {
+  border-bottom: 2px solid currentColor;
+  font-weight: 800;
+}
+
+
+/* ---------- SECTION MARK ---------- */
+
+.section::before {
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   MOBILE — KEEP THE RAW FEEL
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .work-card:nth-child(1),
+  .work-card:nth-child(2),
+  .work-card:nth-child(3) {
+    transform: none;
+  }
+
+  .work-card:hover .work-poster {
+    transform: translateY(-4px);
+  }
+
+  .hero-content h1 {
+    transform: rotate(-1deg) scaleX(.97);
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .hero-content h1 {
+    font-size: 18vw;
+    letter-spacing: -.105em;
+    line-height: .79;
+  }
+
+  .hero-content h1 .outlined-number {
+    -webkit-text-stroke: 2px var(--dirty-white);
+  }
+
+  .work-card:nth-child(1),
+  .work-card:nth-child(2),
+  .work-card:nth-child(3) {
+    transform: none;
+  }
+
+  .work-poster {
+    filter:
+      contrast(1.06)
+      saturate(.94);
+  }
+
+  .work-card:hover .work-poster {
+    transform: translateY(-3px);
+  }
+
+  .poster-caption {
+    letter-spacing: -.04em;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .work-card:nth-child(1),
+  .work-card:nth-child(2),
+  .work-card:nth-child(3),
+  .hero-content h1 {
+    transform: none;
+  }
+
+}
+```
+
+
+  .work-card:nth-child(1),
+  .work-card:nth-child(2),
+  .work-card:nth-child(3),
+  .hero-content h1 {
+    transform: none;
+  }
+
+}
+```
+
 
   *,
   *::before,
