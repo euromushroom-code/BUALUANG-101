@@ -1889,3 +1889,487 @@ body::after {
     scroll-behavior: auto !important;
   }
 }
+
+/* =========================================================
+   BUALUANG 101 — YOUTH GRUNGE / INDIE ZINE
+   blue × yellow × paper × photocopy
+   ========================================================= */
+
+:root {
+  --navy: #08152d;
+  --deep: #050b17;
+  --blue: #1748d1;
+  --yellow: #ffd928;
+  --paper: #f4f2e9;
+  --ink: #111827;
+  --muted: #687080;
+  --line: #111827;
+}
+
+/* ---------- BASE ---------- */
+
+body {
+  background:
+    linear-gradient(rgba(0,0,0,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,.02) 1px, transparent 1px),
+    var(--paper);
+  background-size: 8px 8px, 8px 8px;
+  color: var(--ink);
+}
+
+::selection {
+  background: var(--yellow);
+  color: #000;
+}
+
+/* ---------- HEADER ---------- */
+
+.site-header {
+  background: var(--yellow);
+  border-bottom: 3px solid #000;
+  box-shadow: 5px 5px 0 #000;
+  position: relative;
+  z-index: 20;
+}
+
+.site-header::after {
+  content: "BUALUANG 101";
+  position: absolute;
+  right: 24px;
+  bottom: -12px;
+  background: #000;
+  color: var(--yellow);
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .16em;
+  padding: 3px 7px;
+  transform: rotate(-2deg);
+}
+
+/* ---------- BIG TYPOGRAPHY ---------- */
+
+.hero-content h1 {
+  font-family: "Arial Black", "Manrope", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -.09em;
+  line-height: .78;
+  color: var(--navy);
+  text-shadow: 4px 4px 0 var(--yellow);
+}
+
+/* ทำให้หัวข้อเหมือนโปสเตอร์ */
+
+.section-title,
+.about-section h2,
+.program-section h2,
+.works-section h2,
+.statement-section h2,
+.news-section h2,
+.faq-section h2,
+.contact-section h2 {
+  font-family: "Arial Black", "Manrope", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -.07em;
+  line-height: .88;
+}
+
+/* ---------- HERO ---------- */
+
+.hero {
+  background: var(--blue);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 4px solid #000;
+}
+
+/* grain */
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .16;
+  background-image:
+    radial-gradient(#fff 1px, transparent 1px);
+  background-size: 5px 5px;
+  mix-blend-mode: overlay;
+}
+
+/* giant background number */
+
+.hero::after {
+  content: "101";
+  position: absolute;
+  right: -30px;
+  bottom: -80px;
+  font-family: Arial Black, sans-serif;
+  font-size: clamp(180px, 30vw, 480px);
+  line-height: .7;
+  color: transparent;
+  -webkit-text-stroke: 3px rgba(255,255,255,.18);
+  pointer-events: none;
+}
+
+/* ---------- HERO ART ---------- */
+
+.hero-art {
+  position: relative;
+}
+
+.hero-art img {
+  filter:
+    grayscale(.15)
+    contrast(1.2)
+    saturate(.8);
+  border: 4px solid #000;
+  box-shadow: 10px 10px 0 #000;
+  transform: rotate(2deg);
+}
+
+/* ---------- MARQUEE ---------- */
+
+.marquee {
+  background: #000;
+  color: var(--yellow);
+  border-top: 3px solid #000;
+  border-bottom: 3px solid #000;
+  overflow: hidden;
+}
+
+.marquee span {
+  font-family: "Arial Black", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -.03em;
+}
+
+/* ---------- SECTION DIVIDERS ---------- */
+
+.about-section,
+.program-section,
+.works-section,
+.statement-section,
+.news-section,
+.faq-section,
+.contact-section {
+  border-bottom: 3px solid #000;
+  position: relative;
+}
+
+/* ---------- ABOUT ---------- */
+
+.about-section {
+  background: var(--paper);
+}
+
+.about-section::before {
+  content: "ABOUT / 01";
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-family: monospace;
+  font-size: 11px;
+  font-weight: 900;
+  transform: rotate(2deg);
+}
+
+/* ---------- PROGRAM ---------- */
+
+.program-section {
+  background: var(--yellow);
+}
+
+.program-section h2 {
+  color: #000;
+}
+
+/* ---------- WORK GRID ---------- */
+
+.work-grid {
+  gap: 28px;
+}
+
+/* ---------- WORK CARD ---------- */
+
+.work-card {
+  background: white;
+  border: 3px solid #000;
+  border-radius: 0;
+  box-shadow: 8px 8px 0 #000;
+  position: relative;
+  overflow: visible;
+  transition:
+    transform .15s ease,
+    box-shadow .15s ease;
+}
+
+.work-card:nth-child(odd) {
+  transform: rotate(-1.2deg);
+}
+
+.work-card:nth-child(even) {
+  transform: rotate(1.4deg);
+}
+
+.work-card:hover {
+  transform: translate(-4px, -5px) rotate(0deg);
+  box-shadow: 13px 13px 0 #000;
+}
+
+/* ---------- POSTER ---------- */
+
+.work-poster {
+  border-bottom: 3px solid #000;
+  filter:
+    contrast(1.18)
+    saturate(.82);
+  position: relative;
+}
+
+/* photocopy texture */
+
+.work-poster::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .18;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(0,0,0,.12) 0px,
+      rgba(0,0,0,.12) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+  mix-blend-mode: multiply;
+}
+
+/* ---------- CARD LABEL ---------- */
+
+.work-card::before {
+  content: "BUALUANG 101";
+  position: absolute;
+  top: -12px;
+  left: 12px;
+  z-index: 5;
+  background: #000;
+  color: var(--yellow);
+  padding: 4px 8px;
+  font-family: monospace;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .1em;
+  transform: rotate(-2deg);
+}
+
+/* ---------- CARD TEXT ---------- */
+
+.work-card h3 {
+  font-family: "Arial Black", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -.05em;
+}
+
+.work-card p {
+  font-family: monospace;
+}
+
+/* ---------- STATEMENT ---------- */
+
+.statement-section {
+  background: var(--navy);
+  color: white;
+  overflow: hidden;
+}
+
+.statement-section h2 {
+  font-size: clamp(50px, 9vw, 150px);
+  color: var(--yellow);
+  text-shadow: 5px 5px 0 #000;
+}
+
+/* giant crossed text */
+
+.statement-section::after {
+  content: "MAKE / MOVE / CREATE";
+  position: absolute;
+  bottom: 20px;
+  left: -20px;
+  font-family: Arial Black, sans-serif;
+  font-size: clamp(40px, 8vw, 120px);
+  white-space: nowrap;
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(255,255,255,.15);
+  transform: rotate(-3deg);
+}
+
+/* ---------- NEWS ---------- */
+
+.news-section {
+  background: var(--paper);
+}
+
+.news-section article,
+.news-section .news-card {
+  border: 3px solid #000;
+  background: white;
+  box-shadow: 6px 6px 0 #000;
+}
+
+/* ---------- FAQ ---------- */
+
+.faq-section {
+  background: #e9e7dc;
+}
+
+.faq-section details {
+  border-top: 3px solid #000;
+}
+
+.faq-section summary {
+  font-family: "Arial Black", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* ---------- CONTACT ---------- */
+
+.contact-section {
+  background: var(--yellow);
+  color: #000;
+}
+
+.contact-section a {
+  color: #000;
+  font-weight: 900;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 4px;
+}
+
+/* ---------- BUTTONS ---------- */
+
+button,
+.btn,
+.button,
+a.button {
+  border: 3px solid #000 !important;
+  border-radius: 0 !important;
+  background: var(--yellow) !important;
+  color: #000 !important;
+  font-family: "Arial Black", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  box-shadow: 5px 5px 0 #000;
+  transition: all .12s ease;
+}
+
+button:hover,
+.btn:hover,
+.button:hover,
+a.button:hover {
+  transform: translate(3px, 3px);
+  box-shadow: 2px 2px 0 #000;
+}
+
+/* ---------- LINKS ---------- */
+
+a {
+  transition: none;
+}
+
+/* ---------- FOOTER ---------- */
+
+.site-footer {
+  background: #000;
+  color: white;
+  border-top: 4px solid #000;
+}
+
+.site-footer a {
+  color: var(--yellow);
+}
+
+/* ---------- AMBIENT CONTROL ---------- */
+
+.ambient-control {
+  border: 3px solid #000;
+  border-radius: 0;
+  background: var(--yellow);
+  color: #000;
+  box-shadow: 5px 5px 0 #000;
+}
+
+/* ---------- DIALOG ---------- */
+
+.work-dialog {
+  border: 4px solid #000;
+  border-radius: 0;
+  box-shadow: 12px 12px 0 #000;
+  background: var(--paper);
+}
+
+/* ---------- RAW LABELS ---------- */
+
+.hero-content::before {
+  content: "ART / CULTURE / YOUTH";
+  display: inline-block;
+  width: fit-content;
+  background: #000;
+  color: var(--yellow);
+  padding: 5px 9px;
+  margin-bottom: 18px;
+  font-family: monospace;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .12em;
+  transform: rotate(-1deg);
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 700px) {
+
+  .site-header {
+    box-shadow: 3px 3px 0 #000;
+  }
+
+  .site-header::after {
+    display: none;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(64px, 19vw, 120px);
+    text-shadow: 3px 3px 0 var(--yellow);
+  }
+
+  .hero::after {
+    font-size: 180px;
+    right: -15px;
+    bottom: -25px;
+  }
+
+  .work-grid {
+    gap: 22px;
+  }
+
+  .work-card:nth-child(odd),
+  .work-card:nth-child(even) {
+    transform: rotate(0deg);
+  }
+
+  .work-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0 #000;
+  }
+
+  .statement-section h2 {
+    font-size: 58px;
+  }
+}
